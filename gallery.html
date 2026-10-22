@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>写真紹介 | My Website</title>
+ </head>
+<body>
+  <header>
+    <h2>MY FIRST WEBSITE</h2>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="gallery.html">写真紹介</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </header>
+
+
+
+<main>
+  <h1>写真ギャラリー</h1>
+  <p>写真をクリックすると拡大します。</p>
+
+  <div class="gallery">
+    <img src="photo.png"
+         alt="写真1"
+         onclick="openImage(this.src)"
+         tabindex="0"
+         role="button"
+         aria-label="写真1を拡大"
+         onkeydown="if(event.key==='Enter')openImage(this.src)">
+
+    <img src="photo2.png"
+         alt="写真2"
+         onclick="openImage(this.src)"
+         tabindex="0"
+         role="button"
+         aria-label="写真2を拡大"
+         onkeydown="if(event.key==='Enter')openImage(this.src)">
+  </div>
+
+  <div id="imageModal" class="modal" hidden
+       onclick="closeImage()">
+    <img id="modalImage" alt="拡大写真">
+    <button type="button"
+            onclick="closeImage()">
+      閉じる ×
+    </button>
+  </div>
+
+<h2>背景色を変更してみよう</h2>
+
+<button onclick="changeColor('#fef3c7')">
+  黄色
+</button>
+
+<button onclick="changeColor('#dcfce7')">
+  緑色
+</button>
+
+<button onclick="changeColor('#fce7f3')">
+  ピンク
+</button>
+
+<button onclick="changeColor('#f1f5f9')">
+  元に戻す
+</button>
+
+<h2>JavaScriptの動作確認</h2>
+
+<button onclick="showMessage()">
+  メッセージを表示
+</button>
+
+</main>
+ 
+
+  <footer>© 2026 My First Website</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
